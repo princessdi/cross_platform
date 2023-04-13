@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Лaбораторна робoтa #2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+        Створити додаток для табулювання і виведення на екран значення функції,
+        також побудувати графік функції
+      </ion-text>
+      <ion-item>
+        <ion-label position="floating">Xn</ion-label>
+        <ion-input type="number" id="xn" value="-2.9" #Inputxn></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">x</ion-label>
+        <ion-input type="number" id="xk" value="26.45" #Inputxk></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">a</ion-label>
+        <ion-input type="number" id="a" value="0.8" #Inputa></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">h</ion-label>
+        <ion-input type="number" id="h" value="0.25" #Inputh></ion-input>
+      </ion-item>
+      <ion-button
+        expand="block"
+        (click)="graphras(Inputxn.value, Inputxk.value, Inputa.value, Inputh.value)"
+      >
+        РОЗРАХУНОК
+      </ion-button>
+      <ion-item *ngFor="let item of data1"> {{item}}</ion-item>
+      <ion-item>
+        <canvas #lineCanvas></canvas>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
