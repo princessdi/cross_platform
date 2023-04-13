@@ -23,6 +23,11 @@ const routes: Routes = [
     data: { title: 'Лабораторна робота №3' },
     loadChildren: () => import('./file/file.module').then( m => m.FilePageModule)
   },
+  {
+    path: 'abstract-class',
+    data: { title: 'Лабораторна робота №4' },
+    loadChildren: () => import('./abstract-class/abstract-class.module').then( m => m.AbstractClassPageModule)
+  },
 ];
 @NgModule({
   imports: [
