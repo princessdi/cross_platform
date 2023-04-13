@@ -1,0 +1,51 @@
+<ion-content :fullscreen="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Завдання №1 </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Задано три числа. Якщо всі вони парні, то знайти їх добуток. В іншому
+        випадку – квадрат добутку
+      </p>
+      <ion-item>
+        <ion-label position="floating">Перше число</ion-label>
+        <ion-input
+          class="input"
+          type="number"
+          id="a"
+          value="1"
+          #InputA
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Друге число</ion-label>
+        <ion-input
+          class="input"
+          type="number"
+          id="b"
+          value="2"
+          #InputB
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Третє число</ion-label>
+        <ion-input
+          class="input"
+          type="number"
+          id="c"
+          value="3"
+          #InputC
+        ></ion-input>
+      </ion-item>
+      <ion-button
+        class="button"
+        (click)="ras(InputA.value,InputB.value,InputC.value)"
+        >Розрахунок</ion-button
+      >
+      <ion-item>
+        <p>Результат обчислення {{d}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

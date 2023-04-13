@@ -1,0 +1,31 @@
+<ion-content :fullscreen="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Завдання №2 </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="p_background">
+        Згенерувати матрицю
+        розміром NxN.Виокремити за
+        допомогою кольору
+        усі парні від’ємні
+        елементи кратні 7.
+      </p>
+      <ion-item>
+        <ion-label position="floating">Розмір матриці</ion-label>
+        <ion-input class="input" type="number" id="N" value="5" #InputN></ion-input>
+      </ion-item>
+
+      <ion-button class="button" (click)="ras(InputN.value)">Cформувати матрицю</ion-button>
+      <ion-grid>
+        <ion-row *ngFor="let row of a;">
+          <ion-col *ngFor="let col of row; " [ngStyle]="{backgroundColor:
+            getColor(col)}">
+            {{col}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

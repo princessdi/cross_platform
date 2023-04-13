@@ -1,0 +1,28 @@
+<ion-content :fullscreen="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Завдання №2 </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="p_background">
+        Знайдіть кількість не
+        парних чисел на заданому проміжку
+        чисел [a,b], які
+        діляться без остачі на
+        7.
+      </p>
+      <ion-item>
+        <ion-label position="floating">A</ion-label>
+        <ion-input class="input" type="number" id="a" value="0" #InputA></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">B</ion-label>
+        <ion-input class="input" type="number" id="b" value="10" #InputB></ion-input>
+      </ion-item>
+      <ion-button class="button" (click)="ras(InputA.value,InputB.value)">Кількість</ion-button>
+      <ion-item>
+        <p>Результат: {{d}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
