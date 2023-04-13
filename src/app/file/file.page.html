@@ -1,0 +1,50 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Лабораторна робота №3 </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text> Читання даних з JSON файлу </ion-text>
+      <ion-button expand="block" (click)="load()"> Завантажити </ion-button>
+      <ion-item>
+        <ion-list>
+          <ion-item
+            button
+            *ngFor="let item of data_users; index as i"
+            detail="false"
+            (click)="toggleDetails(i)"
+          >
+          <!-- <ion-label *ngIf="!showDetails[i]" text-wrap> -->
+          <ion-label text-wrap>
+              <!-- <p [ngStyle]="{color: getGreenColor(item.age, item.max)}"> -->
+              <p>
+                <span>Назва факультету:</span> {{item.faculty}}
+                <br>
+                <span> ПІБ декана: </span> <span [ngStyle]="{color: getGreenColor(item.fullname, item.fullname)}">{{item.fullname}}</span>
+                <br>
+                <span>Телефон:</span> {{item.phone}}
+                <br>
+                <span>Адреса:</span> {{item.address}}
+                <!-- <span>Вік:</span> {{item.age}} -->
+              </p>
+            </ion-label>
+            <!-- <ion-text *ngIf="showDetails[i]">
+              <ion-text>
+                <h2 [ngStyle]="{color: getBlueColor(item.mother.age, min)}">
+                  Мати
+                </h2>
+                {{item.mother.name}} {{item.mother.age}}
+              </ion-text>
+              <h2>Діти</h2>
+              <ion-text *ngFor="let item1 of item.children; index as j">
+                {{item1}}
+              </ion-text>
+              <h2>Основна інформація</h2>
+              {{getYes(item.married)}} {{getDog(item.dog)}}
+            </ion-text> -->
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
